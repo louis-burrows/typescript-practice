@@ -1,6 +1,6 @@
-export interface Person {
+export type Person {
     firstName: string;
     lastName: string;
     age: number;
-    likesApples: boolean;
+    likesApples: [boolean, string];
 }

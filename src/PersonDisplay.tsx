@@ -1,32 +1,23 @@
 import React, { useEffect, useState } from 'react';
-// import Person from "../"
 import './App.css';
+import type { Person } from "./types"
 
-interface Person {
-  firstName: string;
-  lastName: string;
-  age: number;
-  likesApples: [boolean, string];
-}
 
 interface Props {
   person: Person;
 }
 
 
-
-
-const PersonDisplay: React.FC<Props> = ({person}) => {
+const PersonDisplay: React.FC<Props> = ({ person }): JSX.Element => {
 
   const ageForJab: number = 70;
-  const name = person.firstName
-
+  const { firstName, lastName, age } = person
 
   return (
     <>
-      <p>First name: {person.firstName}</p>
-      <p>Last name: {person.lastName}</p>
-      <p>Age: {person.age}</p>
+      <p>First name: {firstName}</p>
+      <p>Last name: {lastName}</p>
+      <p>Age: {age}</p>
       <p>Favourite apple: {person.likesApples}</p>
     </>
   );

@@ -1,13 +1,9 @@
 // import React, { useEffect, useState } from 'react';
 import './App.css';
 import PersonDisplay from "./PersonDisplay"
+import type { Person } from "./types"
 
-const person: {
-  firstName: string;
-  lastName: string;
-  age: number;
-  likesApples: [boolean, string];
-} = {
+const person: Person = {
   firstName: "James",
   lastName: "Harris",
   age: 74,
@@ -20,7 +16,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <PersonDisplay person={person}/>
+      <PersonDisplay person={person} />
     </>
   );
 }
